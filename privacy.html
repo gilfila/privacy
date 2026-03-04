@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — T1D Notifier</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=DM+Serif+Display&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #faf9f6;
+      --text: #1a1a1a;
+      --text-muted: #5c5c5c;
+      --accent: #0d6b4c;
+      --accent-soft: #e8f2ef;
+      --border: #e2e0db;
+      --card: #ffffff;
+      --radius: 8px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1rem;
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .container {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem 4rem;
+    }
+
+    header {
+      margin-bottom: 2.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    h1 {
+      font-family: 'DM Serif Display', Georgia, serif;
+      font-size: 1.75rem;
+      font-weight: 400;
+      margin: 0 0 0.35em;
+      color: var(--text);
+    }
+
+    .last-updated {
+      font-size: 0.875rem;
+      color: var(--text-muted);
+    }
+
+    h2 {
+      font-family: 'DM Sans', system-ui, sans-serif;
+      font-size: 1.125rem;
+      font-weight: 600;
+      margin: 2rem 0 0.75rem;
+      color: var(--accent);
+    }
+
+    h2:first-of-type {
+      margin-top: 0;
+    }
+
+    p, li {
+      margin: 0 0 0.75em;
+      color: var(--text);
+    }
+
+    ul {
+      margin: 0 0 1em;
+      padding-left: 1.35em;
+    }
+
+    li {
+      margin-bottom: 0.4em;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      transition: border-color 0.15s ease;
+    }
+
+    a:hover {
+      border-bottom-color: var(--accent);
+    }
+
+    hr {
+      border: none;
+      height: 1px;
+      background: var(--border);
+      margin: 2rem 0;
+    }
+
+    .contact-note {
+      background: var(--accent-soft);
+      padding: 0.75rem 1rem;
+      border-radius: var(--radius);
+      font-size: 0.9375rem;
+      margin: 0.5em 0 0;
+    }
+
+    strong {
+      font-weight: 600;
+    }
+
+    code {
+      font-size: 0.9em;
+      padding: 0.15em 0.4em;
+      background: var(--border);
+      border-radius: 4px;
+    }
+
+    @media (max-width: 480px) {
+      .container {
+        padding: 1.5rem 1rem 3rem;
+      }
+
+      h1 {
+        font-size: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Privacy Policy — T1D Notifier</h1>
+      <p class="last-updated"><strong>Last updated:</strong> 2025-03-04</p>
+    </header>
+
+    <section>
+      <h2>1. Who we are</h2>
+      <p>T1D Notifier is a personal Type 1 Diabetes management tool that sends SMS alerts for glucose levels and replies to your texts (e.g. current glucose or carb estimates from food photos). This policy describes how we handle your information when you use this service.</p>
+      <p class="contact-note"><strong>Contact:</strong> [Your email or contact method — required for compliance]</p>
+    </section>
+
+    <hr>
+
+    <section>
+      <h2>2. Information we collect and use</h2>
+      <ul>
+        <li><strong>Phone numbers</strong> — Your mobile number (and any numbers you text to the service) so we can send you alerts and reply to your messages.</li>
+        <li><strong>SMS/MMS content</strong> — Text and images you send (e.g. “bg”, “glucose”, or food photos) so we can respond with glucose readings or carbohydrate estimates.</li>
+        <li><strong>Glucose and CGM data</strong> — Fetched from Dexcom Share (via your Dexcom credentials you configure) to generate alerts and answer “bg”/“glucose” requests.</li>
+        <li><strong>Logs</strong> — Server logs may include timestamps, phone numbers, and request metadata for debugging and security. Message content is not retained longer than necessary for processing unless you choose to log it.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. How we use this information</h2>
+      <ul>
+        <li>To send you SMS alerts when your glucose is low, high, or trending out of range.</li>
+        <li>To reply to your texts with current glucose or trend when you ask (e.g. “bg”, “glucose”, “sugar”).</li>
+        <li>To estimate carbohydrates from food photos you send (MMS) and reply with the estimate.</li>
+        <li>To operate, secure, and improve the service.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Where your data is processed and stored</h2>
+      <ul>
+        <li><strong>Our systems</strong> — The application runs on infrastructure we control (e.g. a cloud host like Render). Configuration and secrets are stored in environment variables.</li>
+        <li><strong>Twilio</strong> — We use Twilio to send and receive SMS/MMS. Message content and phone numbers are processed by Twilio according to <a href="https://www.twilio.com/legal/privacy" target="_blank" rel="noopener">Twilio’s Privacy Policy</a>.</li>
+        <li><strong>Dexcom</strong> — Glucose data is retrieved from Dexcom Share. Dexcom’s handling of data is governed by <a href="https://www.dexcom.com/privacy-policy" target="_blank" rel="noopener">Dexcom’s privacy practices</a>.</li>
+        <li><strong>Anthropic</strong> — Food images are sent to Anthropic’s Claude API for carbohydrate estimation. See <a href="https://www.anthropic.com/privacy" target="_blank" rel="noopener">Anthropic’s Privacy Policy</a>.</li>
+      </ul>
+      <p>We do not sell your personal information.</p>
+    </section>
+
+    <section>
+      <h2>5. Data retention</h2>
+      <ul>
+        <li><strong>Message content</strong> — Processed in real time; we do not store the body of your texts or images after generating a response, unless temporarily in logs.</li>
+        <li><strong>Logs</strong> — Retained only as long as needed for operation and security (e.g. a short period or as required by your hosting provider).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>6. Security</h2>
+      <p>We use HTTPS, secure configuration, and industry-standard practices for credentials and data in transit. Our providers (Twilio, Dexcom, Anthropic, hosting) apply their own security measures.</p>
+    </section>
+
+    <section>
+      <h2>7. Your choices and rights</h2>
+      <ul>
+        <li><strong>Opt out of SMS</strong> — Stop texting the service number; you can ask us to ensure no further messages are sent to your number.</li>
+        <li><strong>Access or deletion</strong> — Contact us at the contact address above to request access to or deletion of data we hold about you. We will respond in a reasonable time.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Changes to this policy</h2>
+      <p>We may update this privacy policy from time to time. The “Last updated” date at the top will change, and we will post the current version at your service’s <code>/privacy</code> URL (e.g. https://your-app.onrender.com/privacy).</p>
+    </section>
+
+    <section>
+      <h2>9. US SMS / A2P 10DLC</h2>
+      <p>If you receive SMS from us in the United States, those messages are sent via a registered A2P 10DLC campaign. Message and data rates may apply. You can opt out by replying STOP or by contacting us.</p>
+    </section>
+  </div>
+</body>
+</html>
