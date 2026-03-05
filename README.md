@@ -6,7 +6,7 @@ A static privacy policy page for the T1D Notifier app, served at `/privacy`.
 
 ### 1. Push this repo to GitHub
 
-Make sure `privacy.html` is committed and pushed to your GitHub repository.
+Make sure `index.html` is committed and pushed to your GitHub repository.
 
 ### 2. Create a new Static Site on Render
 
@@ -24,16 +24,18 @@ Make sure `privacy.html` is committed and pushed to your GitHub repository.
 | **Build Command** | *(leave blank — no build step needed)* |
 | **Publish Directory** | `.` |
 
-### 4. Add a redirect rule
+Render will automatically serve `index.html` at the root URL.
 
-To serve the page at `/privacy` (e.g. `https://your-app.onrender.com/privacy`), add a rewrite rule:
+### 4. (Optional) Add a rewrite rule for `/privacy`
+
+If you want the page accessible at `/privacy` (e.g. `https://your-app.onrender.com/privacy`):
 
 1. In the static site settings, scroll to **Redirect/Rewrite Rules**.
 2. Click **Add Rule** and enter:
 
 | Source | Destination | Action |
 |---|---|---|
-| `/privacy` | `/privacy.html` | **Rewrite** |
+| `/privacy` | `/index.html` | **Rewrite** |
 
 > **Tip:** Use **Rewrite** (not Redirect) so the URL stays as `/privacy` in the browser.
 
@@ -42,12 +44,12 @@ To serve the page at `/privacy` (e.g. `https://your-app.onrender.com/privacy`), 
 Click **Create Static Site**. Render will deploy in about a minute. Your privacy policy will be live at:
 
 ```
-https://<your-site-name>.onrender.com/privacy
+https://<your-site-name>.onrender.com/
 ```
 
 ### 6. Update the policy page
 
-Open `privacy.html` and replace the placeholder contact note:
+Open `index.html` and replace the placeholder contact note:
 
 ```html
 <p class="contact-note"><strong>Contact:</strong> [Your email or contact method — required for compliance]</p>
@@ -59,4 +61,4 @@ with your actual contact email or method, then commit and push. Render will auto
 
 ## Local preview
 
-Open `privacy.html` directly in a browser — no server needed.
+Open `index.html` directly in a browser — no server needed.
